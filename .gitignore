@@ -1,0 +1,16 @@
+# Model weights
+saved_summary_model/*.safetensors
+saved_summary_model/*.bin
+saved_summary_model/*.pt
+saved_summary_model/*.pth
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+saved_summary_model/.ipynb_checkpoints/
+
+# Dataset files (if present)
+samsum-train.csv
+samsum-test.csv
+samsum-validation.csv
+
+saved_summary_model.zip
