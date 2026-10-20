@@ -1,4 +1,3 @@
-
 # Conversation Summarizer using T5 Transformer
 
 A deep learning project that summarizes conversations using a fine-tuned T5 (Text-to-Text Transfer Transformer) model, integrated with a FastAPI web application.
