@@ -49,10 +49,11 @@ if st.button("Summarize"):
 
             with torch.no_grad():
                 outputs = model.generate(
-                    **inputs,
-                    max_length=150
-                )
-
+                **inputs,
+                max_new_tokens=100,
+                num_beams=4,
+                early_stopping=True
+            )
             summary = tokenizer.decode(
                 outputs[0],
                 skip_special_tokens=True
