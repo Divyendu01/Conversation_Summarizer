@@ -79,9 +79,10 @@ if st.button("✨ Summarize Conversation", type="primary"):
                 with torch.no_grad():
                     outputs = model.generate(
                         **inputs,
-                        max_new_tokens=100,
+                        max_new_tokens=180,
                         num_beams=4,
-                        early_stopping=True
+                        early_stopping=True,
+                        no_repeat_ngram_size=3
                     )
 
                 summary = tokenizer.decode(
