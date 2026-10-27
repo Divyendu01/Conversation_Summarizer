@@ -1,48 +1,36 @@
-# Conversation Summarizer using T5 Transformer
 
-A deep learning project that summarizes conversations using a fine-tuned T5 (Text-to-Text Transfer Transformer) model, integrated with a FastAPI web application.
+# Conversation Summarizer using Fine-Tuned T5
 
-## Approach
+A web application that generates concise summaries of lengthy conversations using a fine-tuned T5-small transformer model.
 
-- Conversation preprocessing and cleaning using regular expressions
-- Tokenization using the T5 tokenizer
-- Conversation summarization using a fine-tuned T5 model from Hugging Face Transformers
-- Summary generation using beam search
-- FastAPI endpoints for conversation summarization
-- Interactive web interface using HTML, CSS, and JavaScript
+## Live Demo
+[Try the Conversation Summarizer](https://divyendu-conversation-summarizer.streamlit.app)
 
-## Dataset
+## Features
+- Generate concise summaries from text conversations
+- Fine-tuned T5 model for conversation summarization
+- Word counts for input and generated summary
+- Download summaries as text files
+- Web interface built with Streamlit
 
-The project uses a fine-tuned T5 model saved locally in the `saved_summary_model` directory. The application accepts user-provided conversations as input and generates concise summaries of the discussion.
+## Technologies Used
+- Python
+- PyTorch
+- Hugging Face Transformers
+- T5-small
+- Streamlit
 
-## Results
+## Model
+The fine-tuned model is hosted on Hugging Face:
+[Divy1812/conversation_summarizer_t5](https://huggingface.co/Divy1812/conversation_summarizer_t5)
 
-Developed a web-based conversation summarization application that accepts conversation text and generates concise summaries using a fine-tuned T5 Transformer model.
+## Run Locally
 
-## Tech Stack
+1. Clone the repository:
+   `git clone https://github.com/Divyendu01/Conversation_Summarizer.git`
 
-Python · PyTorch · Hugging Face Transformers · FastAPI · REST APIs · HTML · CSS · JavaScript · Jinja2 · Uvicorn
+2. Install dependencies:
+   `pip install -r requirements.txt`
 
-## Run
-
-1. Clone the repository and navigate to the project directory.
-2. Install the required dependencies:
-
-   ```bash
-   pip install fastapi uvicorn transformers torch sentencepiece jinja2
-   ```
-
-3. Ensure the `saved_summary_model` directory contains the fine-tuned model and tokenizer files.
-4. Start the FastAPI application:
-
-   ```bash
-   python -m uvicorn app:app --host 127.0.0.1 --port 8000 --reload
-   ```
-
-5. Open `http://127.0.0.1:8000/` in your browser to use the application.
-6. Alternatively, visit `http://127.0.0.1:8000/docs` to test the API endpoints.
-
-## Author
-
-**Divyendu Sharma**
-
+3. Launch the app:
+   `streamlit run streamlit_app.py`
